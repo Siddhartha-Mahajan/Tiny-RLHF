@@ -1,0 +1,9 @@
+dataset:
+  name: preference_pairs_default
+  type: preference_pairs
+  path: data/preferences/train.jsonl
+  format: pairwise
+  fields:
+    prompt: prompt
+    chosen: chosen
+    rejected: rejected

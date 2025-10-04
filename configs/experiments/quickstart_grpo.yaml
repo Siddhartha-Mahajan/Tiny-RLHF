@@ -1,0 +1,18 @@
+defaults:
+  - dataset: ../templates/dataset_multiple_choice.yaml
+  - model: ../templates/model_transformers.yaml
+  - lora: ../templates/model_lora_peft.yaml
+  - trainer: ../templates/trainer_grpo.yaml
+
+run:
+  pipeline: grpo
+  output_dir: outputs/quickstart_grpo
+  seed: 3407
+  logging:
+    use_wandb: false
+    project: tiny-rlhf
+  reward:
+    strategy: format_and_accuracy
+    judge:
+      provider: placeholder
+      model_name: gpt-4o-mini
