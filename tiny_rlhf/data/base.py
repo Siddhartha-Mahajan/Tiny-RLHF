@@ -3,9 +3,9 @@ from __future__ import annotations
 
 import json
 from abc import ABC, abstractmethod
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Dict, Iterable, List, Optional
+from typing import Any, Dict, Iterable, List, Optional
 
 from tiny_rlhf.config import DatasetConfig
 
@@ -15,6 +15,7 @@ class DatasetSplits:
     train: List[Dict]
     validation: List[Dict]
     test: Optional[List[Dict]] = None
+    metadata: Dict[str, Any] = field(default_factory=dict)
 
     def summary(self) -> Dict[str, int]:
         return {

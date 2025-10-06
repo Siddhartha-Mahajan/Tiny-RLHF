@@ -8,12 +8,14 @@ from tiny_rlhf.config import DatasetConfig
 from .base import DatasetAdapter, DatasetSplits
 from .freeform import FreeformAdapter
 from .multiple_choice import MultipleChoiceAdapter
+from .medmcqa import MedMCQAAdapter
 from .preference_pairs import PreferencePairsAdapter
 
 _ADAPTERS: Dict[str, Type[DatasetAdapter]] = {
     "multiple_choice": MultipleChoiceAdapter,
     "freeform": FreeformAdapter,
     "preference_pairs": PreferencePairsAdapter,
+    "medmcqa": MedMCQAAdapter,
 }
 
 

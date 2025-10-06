@@ -23,7 +23,7 @@ class RunConfig(BaseModel):
 
 class DatasetConfig(BaseModel):
     name: str
-    type: Literal["multiple_choice", "freeform", "preference_pairs"]
+    type: Literal["multiple_choice", "freeform", "preference_pairs", "medmcqa"]
     path: str
     validation_path: Optional[str] = None
     test_path: Optional[str] = None
@@ -37,6 +37,7 @@ class DatasetConfig(BaseModel):
     system_prompt: Optional[str] = None
     format: Optional[str] = None
     fields: Dict[str, str] = Field(default_factory=dict)
+    extras: Dict[str, Any] = Field(default_factory=dict)
 
 
 class LoRAConfig(BaseModel):

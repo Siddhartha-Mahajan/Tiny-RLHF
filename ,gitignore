@@ -1,0 +1,86 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+*.dylib
+*.dll
+
+# Distribution / packaging
+.Python
+build/
+dist/
+wheelhouse/
+eggs/
+.eggs/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.coverage
+.coverage.*
+*.cover
+*.py,cover
+coverage.xml
+nosetests.xml
+pytestdebug.log
+.pytest_cache/
+.hypothesis/
+
+# Type checker caches
+.mypy_cache/
+.pytype/
+.pyre/
+
+# Static analysis
+.ruff_cache/
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Hydra output directories
+outputs/
+multirun/
+
+# Experiment artifacts
+runs/
+checkpoints/
+wandb/
+
+# Logs and debug traces
+logs/
+*.log
+*.out
+*.err
+
+# Environment and virtualenvs
+.env
+.env.*
+.venv
+.venv*/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Editor and OS metadata
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+*~
+.DS_Store
+Thumbs.db
+
+# Documentation build artifacts
+site/
+
+# Local configuration overrides
+config.yaml.local

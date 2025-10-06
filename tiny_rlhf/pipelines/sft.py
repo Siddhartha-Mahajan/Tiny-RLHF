@@ -21,6 +21,7 @@ def run(config: ExperimentConfig) -> None:
 
     model_handle = load_model(config.model, config.lora)
     trainer = build_trainer(config.trainer, model_handle)
+    trainer.set_context(config, dataset)
 
     wandb_config = config.run.logging
     if wandb_config.use_wandb and not wandb_config.project:
