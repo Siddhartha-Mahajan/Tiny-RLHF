@@ -1,9 +1,0 @@
-dataset:
-  name: freeform_default
-  type: freeform
-  path: data/freeform/train.jsonl
-  validation_path: data/freeform/validation.jsonl
-  test_path: null
-  input_field: prompt
-  target_field: completion
-  system_prompt: null

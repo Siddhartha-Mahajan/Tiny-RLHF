@@ -1,7 +1,0 @@
-model:
-  name: base_unsloth
-  provider: unsloth
-  pretrained_model_name_or_path: unsloth/Qwen2.5-1.5B-Instruct
-  max_seq_length: 4096
-  dtype: float16
-  trust_remote_code: true

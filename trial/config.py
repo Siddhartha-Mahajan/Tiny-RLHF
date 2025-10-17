@@ -6,7 +6,7 @@ import os
 import torch
 
 # Ensure a default GPU device is visible when none is set externally.
-os.environ.setdefault("CUDA_VISIBLE_DEVICES", "0")
+os.environ.setdefault("CUDA_VISIBLE_DEVICES", "1")
 DEVICE = "cuda:0" if torch.cuda.is_available() else "cpu"
 
 CONFIG = {
@@ -25,7 +25,7 @@ CONFIG = {
         "per_device_train_batch_size": 1,
         "gradient_accumulation_steps": 1,
         "warmup_steps": 5,
-        "num_train_epochs": 2,
+        "num_train_epochs": 5,
         "learning_rate": 2e-4,
         "logging_steps": 5,
     },
@@ -35,7 +35,7 @@ CONFIG = {
         "weight_decay": 0.01,
         "warmup_ratio": 0.1,
         "num_generations": 4,
-        "max_steps": 100,
+        "max_steps": 2000,
         "save_steps": 100,
         "per_device_train_batch_size": 1,
         "gradient_accumulation_steps": 1,
